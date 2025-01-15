@@ -1,16 +1,10 @@
 body {
-  width: 600px;
-  margin: 0 auto;
-  background-color: aquamarine;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+  background-color: #c3c3c3;
 }
 
 h1 {
   margin: 0;
   padding: 20px, 0;
-  color: #ffffff;
-  text-shadow: 3px 3px 1px black;
 }
 
 p {
@@ -18,4 +12,10 @@ p {
   font-size: 16;
   line-height: 2;
   letter-spacing: 1px;
+}
+
+.color {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
 }

@@ -14,7 +14,7 @@
         <!-- Custom CSS -->
         <link 
         href="style.css" 
-        rel="stylesheet">     
+        rel="stylesheet">   
     </head>
     <body>
         <h1>아이디어 메모장</h1>
@@ -24,9 +24,23 @@
 
             <input type="radio" id="gray" name="color" value="gray">
             <label for="gray" class="color"></label>Gray<br>
+
+            <input type="text" size="100" name="memo" required>
+            <label for="meno" class="meno"></label>
+
+            <input type="button" id="submit" name="submit" value="저장">
         </form>
-        <p>something</p>
+
         <button class="btn btn-primary">확인</button>
         <button class="btn btn-danger">취소</button>
+
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">Header</div>
+            <div class="card-body text-success">
+              <h5 class="card-title">Success card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">Footer</div>
+          </div>
     </body>
 </html>

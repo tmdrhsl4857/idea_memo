@@ -19,6 +19,7 @@
     <body>
         <h1>아이디어 메모장</h1>
 
+        <!--색 선택지-->
         <div class="color">
             <input type="radio" id="pink" name="color" value="pink" checked>
             <label for="pink"></label>Pink<br>
@@ -27,17 +28,40 @@
             <label for="gray"></label>Gray<br>
         </div>
 
+        <!--입력 부분-->
         <div class="container">
             <input type="text" class="input">
-            <button class="save">저장</button>
+            <button onclick="add" class="addcard">저장</button>
         </div>
-
+        
+        <!--메모 부분-->
         <div class="card border">
-            <div class="card-header">Header</div>
+            <div class="card-header">
+                newDate()
+            </div>
             <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <button class="btn btn-primary">삭제</button>
             </div>
         </div>
     </body>
+    <!--메모 부분-->
+    <div class="card border">
+        <div class="card-header">
+            newDate()
+        </div>
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button class="btn btn-primary">삭제</button>
+        </div>
+    </div>
+    </body>
+    <script>
+        const add = () => {
+            const newcard = document.createElement("div");
+            newcard.textContent = "";
+            newcard.className = "card border"
+            document.body.appendChild(newcard);
+        }
+    </script>
 </html>

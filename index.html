@@ -18,6 +18,7 @@
     </head>
     <body>
         <h1>아이디어 메모장</h1>
+
         <form>
             <input type="radio" id="pink" name="color" value="pink" checked>
             <label for="pink" class="color"></label>Pink<br>
@@ -31,16 +32,12 @@
             <input type="button" id="submit" name="submit" value="저장">
         </form>
 
-        <button class="btn btn-primary">확인</button>
-        <button class="btn btn-danger">취소</button>
-
-        <div class="card border-success mb-3" style="max-width: 18rem;">
-            <div class="card-header bg-transparent border-success">Header</div>
-            <div class="card-body text-success">
-              <h5 class="card-title">Success card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="card border">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <button class="btn btn-primary">삭제</button>
             </div>
-            <div class="card-footer bg-transparent border-success">Footer</div>
-          </div>
+        </div>
     </body>
 </html>

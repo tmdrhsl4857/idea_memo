@@ -29,39 +29,48 @@
         </div>
 
         <!--입력 부분-->
-        <div class="container">
+        <div class="input-container">
             <input type="text" class="input">
-            <button onclick="add" class="addcard">저장</button>
+            <button onclick="add()" class="addcard">저장</button>
         </div>
         
         <!--메모 부분-->
-        <div class="card border">
-            <div class="card-header">
-                newDate()
-            </div>
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button class="btn btn-primary">삭제</button>
-            </div>
-        </div>
+        <div id="card-container"></div>
+
+        <!--메모 추가 기능-->
+        <script>
+            const add = () => {
+                const memoinput = document.querySelector(".input");
+                const memotext = memoinput.value;
+            
+                const newcard = document.createElement("div");
+                newcard.className = "card border"
+
+                const cardheader = document.createElement("div");
+                cardheader.className = "card-header"
+                cardheader.textContent = new Date();
+
+                const cardbody = document.createElement("div");
+                cardbody.className = "card-body"
+
+                const cardtext = document.createElement("p");
+                cardtext.className = "card-text"
+                cardtext.textContent = memotext;
+
+                const delbutton = document.createElement("button");
+                delbutton.className = "btn btn-primary"
+                delbutton.textContent = "삭제";
+                delbutton.onclick = () => {
+                    newcard.remove();
+                };
+
+                cardbody.appendChild(cardtext);
+                cardbody.appendChild(delbutton);
+                newcard.appendChild(cardheader);
+                newcard.appendChild(cardbody);
+
+                document.getElementById("card-container").appendChild(newcard);
+            }
+        </script>
     </body>
-    <!--메모 부분-->
-    <div class="card border">
-        <div class="card-header">
-            newDate()
-        </div>
-        <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <button class="btn btn-primary">삭제</button>
-        </div>
-    </div>
-    </body>
-    <script>
-        const add = () => {
-            const newcard = document.createElement("div");
-            newcard.textContent = "";
-            newcard.className = "card border"
-            document.body.appendChild(newcard);
-        }
-    </script>
 </html>

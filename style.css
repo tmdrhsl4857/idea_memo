@@ -7,7 +7,7 @@ h1 {
   font-size: 14px;
 }
 
-.container {
+.input-container {
   display: flex;
   align-items: center;
   margin: 0;

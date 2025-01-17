@@ -17,7 +17,7 @@
         rel="stylesheet">
     </head>
     <body>
-        <h1>아이디어 메모장</h1>
+        <h1 class="title">아이디어 메모장</h1>
 
         <!--색 선택지-->
         <div class="color">
@@ -29,9 +29,9 @@
         </div>
 
         <!--입력 부분-->
-        <div class="input-container">
-            <input type="text" class="input">
-            <button onclick="add()" class="addcard">저장</button>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <button class="input-group-text" id="basic-addon2" onclick="add()">저장</button>
         </div>
         
         <!--메모 부분-->
@@ -40,14 +40,17 @@
         <!--메모 추가 기능-->
         <script>
             const add = () => {
-                const memoinput = document.querySelector(".input");
+                const memoinput = document.querySelector(".form-control");
                 const memotext = memoinput.value;
+
+                const selectedColor = document.querySelector('input[name="color"]:checked').value;
             
                 const newcard = document.createElement("div");
                 newcard.className = "card border"
 
                 const cardheader = document.createElement("div");
                 cardheader.className = "card-header"
+                cardheader.style.backgroundColor = selectedColor;
                 cardheader.textContent = new Date();
 
                 const cardbody = document.createElement("div");
